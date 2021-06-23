@@ -31,9 +31,10 @@ div#square:hover{
     transform: rotateY(180deg);
     width: 100px;
     height: 100px;
+    transition: margin-left 3s;
     
 }
-#train:hover{
+#train:hover img{
     margin-left: 1000px;
 }
 
@@ -42,8 +43,8 @@ img#plane{
     width: 200px;
     height: 100px;
     transition: all 3s;
-    
 }
+
 @keyframes plane-animation{
     0%{
         width: 200px;
@@ -58,12 +59,13 @@ img#plane{
         height: 200px;
     }
 }
+
 img#plane:hover{
     animation-name: plane-animation;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-    
 }
+
 
 
 /*Button*/
