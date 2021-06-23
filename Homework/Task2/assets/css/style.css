@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/*border spinner*/
+#border-spinner{
+    margin: 20px;
+}
+#big-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(51, 50, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: period;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+#little-circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white; 
+    display: flex;
+    align-items: center; 
+}
+#little-circle::before{
+    content: "";
+    padding: 7px 10px;
+    background-color: white;
+    position: relative;
+    left: -30%;
+}
+@keyframes period{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/*Growing spinner*/
+#growwing-spinner{
+    margin: 20px;
+}
+#circle-spinner{
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    animation-name: growwing-animation;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    
+    
+    
+}
+@keyframes growwing-animation {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
